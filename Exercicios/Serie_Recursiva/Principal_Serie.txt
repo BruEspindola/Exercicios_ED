@@ -1,0 +1,22 @@
+package Controller;
+
+import javax.swing.JOptionPane;
+
+public class Principal_Serie {
+	public static void main(String[] args) {
+
+		double N;
+
+		N = Double.parseDouble(JOptionPane.showInputDialog("Insira um numero para calcular a serie:"));
+
+		System.out.printf("%.2f", SerieHamonica(N));
+	}
+
+	private static Double SerieHamonica(double N) {
+		if (N == 1) {
+			return 1 / N;
+		} else {
+			return 1 / N + SerieHamonica(N - 1);
+		}
+	}
+}
